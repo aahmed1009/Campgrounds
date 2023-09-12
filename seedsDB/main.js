@@ -22,6 +22,10 @@ const cleanCampGroundDB = async () => {
     const camp = new campground({
       location: `${cities[random1000].city},${cities[random1000].state} `,
       title: `${sample(descriptors)},${sample(places)} `,
+      image: "https://source.unsplash.com/collection/483251",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit dolor repellat excepturi quasi fugiat, non fuga fugit perspiciatis doloribus cum porro! Maiores mollitia amet velit nesciunt officia quas libero nisi?",
+      price: Math.floor(Math.random() * 20) + 10,
     });
     await camp.save();
   }
